@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AxWMPLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,17 @@ using System.Windows.Forms;
 
 namespace NachoAprende
 {
-    public partial class Form1 : Form
+    public partial class frmNachoAprende : Form
     {
-        public Form1()
+        public frmNachoAprende()
         {
             InitializeComponent();
+        }
+
+        private void frmNachoAprende_Load(object sender, EventArgs e)
+        {
+            string videoPath = @"C:\Users\johan\source\repos\NachoAprende\bin\Debug\video.mp4";
+            wmpMusica.URL = videoPath;
         }
     }
 }

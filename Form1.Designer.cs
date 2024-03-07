@@ -1,6 +1,6 @@
 ﻿namespace NachoAprende
 {
-    partial class Form1
+    partial class frmNachoAprende
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,13 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNachoAprende));
+            this.wmpMusica = new AxWMPLib.AxWindowsMediaPlayer();
+            this.wbNavegador = new AxSHDocVw.AxWebBrowser();
+            ((System.ComponentModel.ISupportInitialize)(this.wmpMusica)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wbNavegador)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // wmpMusica
+            // 
+            this.wmpMusica.Enabled = true;
+            this.wmpMusica.Location = new System.Drawing.Point(429, 12);
+            this.wmpMusica.Name = "wmpMusica";
+            this.wmpMusica.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wmpMusica.OcxState")));
+            this.wmpMusica.Size = new System.Drawing.Size(307, 346);
+            this.wmpMusica.TabIndex = 1;
+            // 
+            // wbNavegador
+            // 
+            this.wbNavegador.Enabled = true;
+            this.wbNavegador.Location = new System.Drawing.Point(12, 12);
+            this.wbNavegador.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wbNavegador.OcxState")));
+            this.wbNavegador.Size = new System.Drawing.Size(382, 346);
+            this.wbNavegador.TabIndex = 0;
+            // 
+            // frmNachoAprende
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(748, 450);
+            this.Controls.Add(this.wmpMusica);
+            this.Controls.Add(this.wbNavegador);
+            this.Name = "frmNachoAprende";
+            this.Text = "Nacho Aprende";
+            this.Load += new System.EventHandler(this.frmNachoAprende_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.wmpMusica)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wbNavegador)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private AxSHDocVw.AxWebBrowser wbNavegador;
+        private AxWMPLib.AxWindowsMediaPlayer wmpMusica;
     }
 }
 
